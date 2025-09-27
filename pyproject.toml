@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "md-to-docx"
+version = "0.1.0"
+description = "Convert Markdown to DOCX using a Word template, with nested lists, GFM tables, URL/local images, and LaTeX math (OMML + PNG fallback)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Your Name", email = "you@example.com" }]
+keywords = ["markdown", "docx", "word", "converter", "latex", "omml"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Text Processing :: Markup",
+  "Topic :: Office/Business",
+]
+
+dependencies = [
+  "python-docx>=1.1.2",
+  "markdown-it-py>=3.0.0",
+  "mdit-py-plugins>=0.5.0",
+  "Pillow>=10.4.0",
+  "matplotlib>=3.9.2",
+  "lxml>=5.3.0",
+  "requests>=2.32.5",
+  "linkify-it-py>=2.0.3"
+]
+
+[project.urls]
+Homepage = "https://github.com/your-user/md-to-docx"
+Issues = "https://github.com/your-user/md-to-docx/issues"
+
+[project.scripts]
+md2docx = "md_to_docx.__main__:main"
+
+[tool.setuptools]
+package-data = { "md_to_docx" = ["py.typed"] }
+exclude-package-data = { "" = ["tests/*"] }
