@@ -9,7 +9,7 @@ description = "Convert Markdown to DOCX using a Word template, with nested lists
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = "domth.dev", email = "domth.dev@gmail.com" }]
 keywords = ["markdown", "docx", "word", "converter", "latex", "omml"]
 classifiers = [
   "Programming Language :: Python :: 3",

@@ -1,34 +1,3 @@
-# md-to-docx
-
-Convert **Markdown (.md)** to **DOCX** using an optional **Word template**.  
-Supports headings, paragraphs, nested lists that reuse template numbering, GFM tables, task lists, local & URL images, and LaTeX math (OMML with PNG fallback).
-
----
-
-## Features
-
-- **Template-aware lists**: ordered/bulleted lists reuse your template’s numbering (`numId`) at all nesting levels.
-- **Markdown coverage**: headings (H1–H6), paragraphs, **bold/italic/strike**, `inline code`, block quotes, code blocks, horizontal rules.
-- **Tables**: GFM tables with cell alignment (left/center/right).
-- **Task lists**: `[x]` and `[ ]` checkboxes.
-- **Images**:
-  - Local images embedded.
-  - **URL images** downloaded, validated by content-type and size, then embedded.
-- **Math**:
-  - LaTeX → **OMML** for common constructs (`^`, `_`, `\frac{a}{b}`, `\sqrt{...}`, `\sum`, `\int`).
-  - PNG fallback via Matplotlib when OMML parse isn’t supported.
-- **Hyperlinks**: Markdown links become real clickable Word hyperlinks.
-
----
-
-## Install
-
-```bash
-pip install md-to-docx
-```
-
-````
-
 > Optional dependency for auto-linking bare URLs:
 > `pip install linkify-it-py`
 > (Or disable `linkify` in code; see _Configuration_.)
@@ -109,6 +78,7 @@ $$
 ## Configuration
 
 - **Template lists**: The converter reads your template’s numbering definitions to keep corporate bullets/numbers consistent.
+
 - **Base font override**:
 
   - `--apply-base-font --font-name "Arial" --font-size 11` (use with care for corporate templates).
@@ -195,10 +165,3 @@ twine check dist/*
 
 - **Math looks like an image**
   For unsupported LaTeX constructs, the PNG fallback is used intentionally to keep the output readable.
-
----
-
-## License
-
-MIT
-````
